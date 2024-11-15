@@ -15,7 +15,7 @@ from datetime import timedelta
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
+# We see your API key XD
 SECRET_KEY = 'ftov1!91yf@7f7&g2%*@0_e^)ac&f&9jeloc@#v76#^b1dhbl#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -38,8 +38,8 @@ REST_FRAMEWORK = {
 SIMPLE_JWT: {
     'ACCESS_TOKEN_LIFETIME': timedelta(hours=12),  
     'REFRESH_TOKEN_LIFETIME': timedelta(days=7), 
-    'ROTATE_REFRESH_TOKENS': False,  
-    'BLACKLIST_AFTER_ROTATION': False,
+    "AUTH_HEADER_TYPES": ("Bearer",),
+
 }
 
 
